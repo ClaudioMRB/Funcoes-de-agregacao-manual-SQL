@@ -21,6 +21,12 @@ WHERE *condition*;
 
 A função retorna o valor médio de uma coluna numérica. `AVG()`
 
+**EXEMPLO 1**
+
+**SELECT COUNT**(id) **FROM** tb_sale **WHERE** price > 500
+
+(valor retorna a quantidade de linhas na coluna id com valores maiores que 500)
+
 ### AVG() Sintaxe
 
 SELECT AVG(*column_name*)
@@ -29,11 +35,25 @@ WHERE *condition*;
 
 A função retorna a soma total de uma coluna numérica. `SUM()`
 
-### SOMA() Sintaxe
+**EXEMPLO 1**
+
+(SUPONDO QUE EU QUEIRA O PREÇO MÉDIO, ELE PEGARÁ TODAS AS LINHAS CUJO VALOR ESTEJA ACIMA DE 500 E ME RETORNA O PREÇO MÉDIO)
+
+**SELECT AVG**(price) **FROM** tb_sale **WHERE** price > 500
+
+### SUM() Sintaxe
 
 SELECT SUM(*column_name*)
 FROM *table_name*
 WHERE *condition*;
+
+**EXEMPLO 1**
+
+(SUPONDO QUE EU QUEIRA A SOMA DOS PREÇOS QUE ESTÃO ACIMA DE 500, A FUNÇÃO SOMA VAI AGREGAR OS VALORES EM UM VALOR TOTAL)
+
+**SELECT SUM**(price) **FROM** tb_sale **WHERE** price > 500
+
+
 
 ------
 
@@ -128,6 +148,14 @@ SELECT MAX(*column_name*)
 FROM *table_name*
 WHERE *condition*;
 
+
+
+**EXEMPLO 1**
+
+Me retorna a linha que tenha o menor valor de price.
+
+**SELECT MIN**(price) **FROM** tb_sale **WHERE** price > 500
+
 ------
 
 ## Banco de dados de demonstração
@@ -163,3 +191,9 @@ A seguinte declaração SQL encontra o preço do produto mais caro:
 
 SELECT MAX(Price) AS LargestPrice
 FROM Products;
+
+**EXEMPLO 1**
+
+Me retorna a linha que tenha o maior valor de price.
+
+**SELECT MAX**(price) **FROM** tb_sale **WHERE** price > 500
